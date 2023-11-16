@@ -1,0 +1,3 @@
+exportPattern("^[[:alpha:]]+")
+export(k2)
+export(pie_fitted_plot)
