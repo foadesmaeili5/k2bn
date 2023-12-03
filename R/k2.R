@@ -23,11 +23,11 @@
 
 #' k2 algorithm for structure learning
 #' @details
-#' K2 Algorithm is a structure learning algorithm for bayesian network, which is usefull
-#' when the orders of the nodes are availeable, 
+#' The k2 Algorithm is a structure learning algorithm for Bayesian network, 
+#' which is useful when the orders of the nodes are available, 
 #' 
 #' @note
-#' the algorithm uses the logarithm of the score function.
+#' The algorithm uses the logarithm of the score function.
 #' 
 #' @param variables A character vector specifying the variable names in order.
 #' @param x data.frame containing the variables.
@@ -39,6 +39,7 @@
 #' @examples
 #' require(bnlearn)
 #' require(Rgraphviz)
+#' require(dplyr)
 #'
 #' x1 <- c(1,1,0,1,0,0,1,0,1,0)
 #' x2 <- c(0,1,0,1,0,1,1,0,1,0)
@@ -57,6 +58,7 @@
 #'
 #' @importFrom bnlearn k2
 #' @importFrom Rgraphviz graphviz.plot empty.graph arcs
+#' @importFrom dplyr select
 #'
 #' @keywords bayesian network structure learning k2 algorithm
 #'
@@ -101,7 +103,7 @@ k2 <- function(variables,x,u,show = FALSE) {
       if(ppold==pold) {
         canbeParent <- c()
       }
-      #Sys.sleep(2)
+      Sys.sleep(2)
     }
   }
 

@@ -4,7 +4,7 @@
 #'
 #' @param dag The Bayesian network represented as a directed acyclic graph (DAG).
 #'
-#' @return A Shiny app for interactive exploration of the Bayesian network.
+#' @return A Shiny app for the interactive exploration of the Bayesian network.
 #' @export
 #'
 #' @examples
@@ -40,7 +40,9 @@
 #'    "[PropCost|ThisCarCost:OtherCarCost]")
 #' dag <- model2network(modelstring)
 #' dag <- bn.fit(dag, insurance)
-#' interact_app(dag)
+#' if (interactive()) {
+#'   interact_app(dag)
+#' }
 #'
 #' @importFrom shiny fluidPage column visNetworkOutput actionButton plotOutput
 #' @importFrom shiny verbatimTextOutput renderPlot observe eventReactive

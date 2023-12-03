@@ -31,6 +31,7 @@ the algorithm uses the logarithm of the score function.
 \examples{
 require(bnlearn)
 require(Rgraphviz)
+require(dplyr)
 
 x1 <- c(1,1,0,1,0,0,1,0,1,0)
 x2 <- c(0,1,0,1,0,1,1,0,1,0)

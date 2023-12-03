@@ -48,6 +48,8 @@ modelstring <-
    "[PropCost|ThisCarCost:OtherCarCost]")
 dag <- model2network(modelstring)
 dag <- bn.fit(dag, insurance)
-interact_app(dag)
+if (interactive()) {
+  interact_app(dag)
+}
 
 }

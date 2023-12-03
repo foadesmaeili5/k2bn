@@ -2,7 +2,7 @@
 % Please edit documentation in R/pie_fitted_plot.R
 \name{pie_fitted_plot}
 \alias{pie_fitted_plot}
-\title{Title}
+\title{Pie Chart with Fitted Curve for Multiple Parents}
 \usage{
 pie_fitted_plot(fitted_dag, node)
 }
@@ -15,14 +15,18 @@ pie_fitted_plot(fitted_dag, node)
 ggplot2 plot
 }
 \description{
-Title
+Pie Chart with Fitted Curve for Multiple Parents
 }
 \details{
-Additional details...
+The "fitted_dag" argument should be a bn.fit object obtained by estimating
+parameters using methods such as MLE or Bayesian methods. The "node" argument
+specifies the name of the node for which the pie chart and fitted curve will 
+be plotted. The function is particularly useful when there are multiple 
+parents in the k2 algorithm.
 }
 \examples{
 require(bnlearn)
-required(ggplot2)
+require(ggplot2)
 data(insurance)
 modelstring <-  
  paste0("[Age][Mileage][SocioEcon|Age]",

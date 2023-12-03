@@ -1,18 +1,22 @@
 # -------------------------------------------------------------------------
-#' Title
+#' Pie Chart with Fitted Curve for Multiple Parents
 #' 
 #' @details
-#' Additional details...
+#' The `fitted_dag` argument should be a bn.fit object obtained by estimating
+#' parameters using methods such as MLE or Bayesian methods. The `node` argument
+#' specifies the name of the node for which the pie chart and fitted curve will 
+#' be plotted. The function is particularly useful when there are multiple 
+#' parents in the k2 algorithm.
 #' 
 #'
-#' @param fitted_dag bn.fit object
+#' @param fitted_dag `bn.fit` object
 #' @param node name of the node to plot the probabilities
-#' @return ggplot2 plot
+#' @return `ggplot2` plot
 #' @export
 #'
 #' @examples
 #' require(bnlearn)
-#' required(ggplot2)
+#' require(ggplot2)
 #' data(insurance)
 #  
 #' modelstring <-  
@@ -59,7 +63,7 @@ pie_fitted_plot <- function(fitted_dag, node) {
   if (length(Fcet) > 2) {
     ggplot(x, aes(
       x = get(Fcet[1]),
-      y = Freq,
+      y = get("Freq"),
       fill = get(n[1])
     )) +
       xlab(Fcet[1]) +
@@ -85,7 +89,7 @@ pie_fitted_plot <- function(fitted_dag, node) {
   } else if (length(Fcet) > 1) {
     ggplot(x, aes(
       x = get(Fcet[1]),
-      y = Freq,
+      y = get("Freq"),
       fill = get(n[1])
     )) +
       geom_bar(stat = "identity") +
@@ -112,7 +116,7 @@ pie_fitted_plot <- function(fitted_dag, node) {
   } else if (length(Fcet) > 0) {
     ggplot(x, aes(
       x = get(Fcet[1]),
-      y = Freq,
+      y = get("Freq"),
       fill = get(n[1])
     )) +
       geom_bar(stat = "identity") +
@@ -137,7 +141,7 @@ pie_fitted_plot <- function(fitted_dag, node) {
     ggplot(x, aes(
       x = 1,
       fill = get(n[1]),
-      y = Freq
+      y = get("Freq")
     )) +
       geom_bar(stat = "identity") +
       coord_polar(theta = "y") +
