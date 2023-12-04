@@ -1,13 +1,13 @@
 Package: k2bn
 Type: Package
-Title: K2 Algorithm in Bayesian Networks (Title Case)
+Title: K2 Algorithm in Bayesian Networks
 Version: 1.0.0
 Authors@R: c(
   person("Foad", "Esmaeili", email = "foadesmaeili5@gmail.com", role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0002-9638-0807")),
   person("Negar", "Soleimani", email = "negarsoleimani76@gmail.com", role = "cph", comment = c(ORCID = "0009-0002-5993-3801")),
   person("Vahid", "Rezaeitabar", email = "vhrezaei@atu.ac.ir", role = "cph", comment = c(ORCID = "0000-0001-8530-7359"))
   )
-Maintainer: 'Foad Esmaeili' <foadesmaeili5@gmail.com>
+Maintainer: Foad Esmaeili <foadesmaeili5@gmail.com>
 Description: Provides the K2 algorithm, a score-based algorithm for learning Bayesian Networks. It also includes interactive visualization of fitted values using 'shiny' and 'ggplot2'.
 License: GPL (>= 2)
 URL: https://github.com/foadesmaeili5/k2bn
@@ -23,3 +23,5 @@ Imports:
   shiny,
   visNetwork,
   Rgraphviz
+  
+BugReports: https://github.com/foadesmaeili5/k2bn/issues
