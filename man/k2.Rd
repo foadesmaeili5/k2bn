@@ -22,11 +22,11 @@ A Bayesian network structure represented as a graph.
 k2 algorithm for structure learning
 }
 \details{
-K2 Algorithm is a structure learning algorithm for bayesian network, which is usefull
-when the orders of the nodes are availeable,
+The k2 Algorithm is a structure learning algorithm for Bayesian network, 
+which is useful when the orders of the nodes are available,
 }
 \note{
-the algorithm uses the logarithm of the score function.
+The algorithm uses the logarithm of the score function.
 }
 \examples{
 require(bnlearn)

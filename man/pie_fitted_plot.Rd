@@ -7,19 +7,19 @@
 pie_fitted_plot(fitted_dag, node)
 }
 \arguments{
-\item{fitted_dag}{bn.fit object}
+\item{fitted_dag}{`bn.fit` object}
 
 \item{node}{name of the node to plot the probabilities}
 }
 \value{
-ggplot2 plot
+`ggplot2` plot
 }
 \description{
 Pie Chart with Fitted Curve for Multiple Parents
 }
 \details{
-The "fitted_dag" argument should be a bn.fit object obtained by estimating
-parameters using methods such as MLE or Bayesian methods. The "node" argument
+The `fitted_dag` argument should be a bn.fit object obtained by estimating
+parameters using methods such as MLE or Bayesian methods. The `node` argument
 specifies the name of the node for which the pie chart and fitted curve will 
 be plotted. The function is particularly useful when there are multiple 
 parents in the k2 algorithm.

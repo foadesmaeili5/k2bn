@@ -10,7 +10,7 @@ interact_app(dag)
 \item{dag}{The Bayesian network represented as a directed acyclic graph (DAG).}
 }
 \value{
-A Shiny app for interactive exploration of the Bayesian network.
+A Shiny app for the interactive exploration of the Bayesian network.
 }
 \description{
 This function creates a Shiny app for interactively exploring a Bayesian network.
