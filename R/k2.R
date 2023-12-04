@@ -33,8 +33,10 @@
 #' @param x data.frame containing the variables.
 #' @param u The maximum number of parents for each variable.
 #' @param show Logical, indicating whether to display intermediate steps (default is FALSE).
-#'
-#' @return A Bayesian network structure represented as a graph.
+#' @param timesleep Indicate the time for sleeping per each loop.
+#' 
+#' @return 
+#' A Bayesian network structure represented as a graph.
 #'
 #' @examples
 #' require(bnlearn)
@@ -63,7 +65,7 @@
 #' @keywords bayesian network structure learning k2 algorithm
 #'
 #' @export
-k2 <- function(variables,x,u,show = FALSE) {
+k2 <- function(variables,x,u,show = FALSE,timesleep= 1) {
   parent <- list()
   length(parent) <- length(variables)
   names(parent) <- variables
@@ -103,7 +105,7 @@ k2 <- function(variables,x,u,show = FALSE) {
       if(ppold==pold) {
         canbeParent <- c()
       }
-      Sys.sleep(2)
+      Sys.sleep(timesleep)
     }
   }
 

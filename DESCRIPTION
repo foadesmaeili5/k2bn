@@ -23,5 +23,5 @@ Imports:
   shiny,
   visNetwork,
   Rgraphviz
-  
 BugReports: https://github.com/foadesmaeili5/k2bn/issues
+
