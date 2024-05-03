@@ -48,6 +48,7 @@
 #' ins_fit <- bn.fit(dag,insurance)
 #' graphviz.plot(dag)
 #'
+#'
 #' pie_fitted_plot(ins_fit,"GoodStudent")
 
 pie_fitted_plot <- function(fitted_dag, node) {
